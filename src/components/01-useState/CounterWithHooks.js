@@ -3,7 +3,7 @@ import {useCustomCouter} from '../../Hooks/useCustomCouter'
 
 export const CounterWithHooks = () => {
 
-    const {increment, decrement, counter} =useCustomCouter(20);
+    const {increment, decrement, reset, counter} =useCustomCouter(20);
 
     return (
         <>
@@ -11,6 +11,7 @@ export const CounterWithHooks = () => {
             <hr/>
             {/*Se manda con una funcion arrow ya que si se manda decrement(2), lo primero que recibe es el evento del mouse*/}
             <button onClick={() => decrement(2)} className="btn btn-outline-primary" >-1</button>
+            <button onClick={reset} className="btn btn-outline-primary" >Restablecer</button>
             <button onClick={() => increment(2)} className="btn btn-outline-primary" >+1</button>            
         </>
     )

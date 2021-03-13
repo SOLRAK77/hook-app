@@ -12,9 +12,14 @@ export const useCustomCouter = (initialState = 10) => {
         setCounter(counter - factor)
     }
 
+    const reset = () => {
+        setCounter(initialState);
+    }
+
     return {
         counter,
         decrement,
+        reset,
         increment,
     }
 }
