@@ -64,7 +64,7 @@ export const SimpleForm = () => {
                 autoCorrect="off"
                 />
 
-            { name == '123'? <Message />:'' }
+            {name == '123' && <Message />}
         </>
     )
 }
