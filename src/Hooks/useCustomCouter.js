@@ -4,12 +4,12 @@ export const useCustomCouter = (initialState = 10) => {
 
     const [counter, setCounter] = useState(initialState);
 
-    const increment = () => {
-        setCounter(counter + 1)
+    const increment = ( factor = 1 ) => {
+        setCounter(counter + factor)
     }
 
-    const decrement = () =>{
-        setCounter(counter - 1)
+    const decrement = ( factor = 1) =>{
+        setCounter(counter - factor)
     }
 
     return {

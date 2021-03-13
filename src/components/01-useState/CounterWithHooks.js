@@ -9,8 +9,9 @@ export const CounterWithHooks = () => {
         <>
             <h1>Counter With Hook: {counter}</h1>
             <hr/>
-            <button onClick={decrement} className="btn btn-outline-primary" >-1</button>
-            <button onClick={increment} className="btn btn-outline-primary" >+1</button>            
+            {/*Se manda con una funcion arrow ya que si se manda decrement(2), lo primero que recibe es el evento del mouse*/}
+            <button onClick={() => decrement(2)} className="btn btn-outline-primary" >-1</button>
+            <button onClick={() => increment(2)} className="btn btn-outline-primary" >+1</button>            
         </>
     )
 }
