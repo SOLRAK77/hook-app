@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom';
 //import { CounterWithHooks } from './components/01-useState/CounterWithHooks';
 //import {HookApp} from './HookApp'
 //import {SimpleForm} from './components/02-useEffect/SimpleForm'
-import {FormWithCustomHook} from './components/02-useEffect/FormWithCustomHook'
+//import {FormWithCustomHook} from './components/02-useEffect/FormWithCustomHook'
+import {MultipleHooks} from './components/03-HookExamples/MultipleHooks'
 
 ReactDOM.render(
-  <FormWithCustomHook />,
+  <MultipleHooks />,
   document.getElementById('root')
 );
