@@ -20,11 +20,15 @@ export const useFetch = (url) => {
             .then(resp => resp.json())
             .then(data => {
 
-                setState({
+                setTimeout(() => { 
+                    setState({
                    loading:false,
                    error:null,
                    data :data
-                })
+                    })
+                }
+                ,4000)
+                
 
             })
 
