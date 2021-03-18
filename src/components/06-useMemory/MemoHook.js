@@ -1,4 +1,5 @@
 import React, {useState, useMemo} from 'react'
+import { procesoPesado } from '../../helpers/procesoPesado';
 import {useCustomCouter} from '../../Hooks/useCustomCouter'
 
 import './effects.css'
@@ -7,14 +8,6 @@ export const MemoHook = () => {
 
     const {counter, increment} = useCustomCouter(10000);
     const [show, setShow] = useState(true);
-
-    const procesoPesado = (iteraciones) => {
-        for(let i=0; i<=iteraciones; i++){
-            console.log('Ahi vamos...')
-        }
-
-        return `${iteraciones} iteaciones realizadas`
-    }
 
     const memoProcesoPesado = useMemo(() => procesoPesado(counter), [counter])
 
