@@ -1,0 +1,10 @@
+body{
+    padding: 70px;
+}
+.Message--contain{
+    padding-top: 20px;
+    color:coral;
+}
+.blockquote{
+    display: flex;
+}

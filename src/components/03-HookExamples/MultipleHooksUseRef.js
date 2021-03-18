@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import { useFetchUseRef } from '../../Hooks/useFetchUseRef'
 import { useCustomCouter } from '../../Hooks/useCustomCouter'
 
@@ -12,7 +12,7 @@ export const MultipleHooksUseRef = () => {
     const {loading, data, error} = useFetchUseRef(`https://www.breakingbadapi.com/api/quotes/${counter}`);
 
     const {author, quote} = !!data && data[0]
-    console.log(author, quote)
+    console.log(author, quote, error)
 
     return (
         <div>

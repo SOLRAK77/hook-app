@@ -27,7 +27,7 @@ export const useFetch = (url) => {
                    data :data
                     })
                 }
-                ,4000)
+                ,800)
                 
 
             })
