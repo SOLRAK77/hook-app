@@ -1,20 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-//import { CounterApp } from './components/01-useState/CounterApp';
-//import { CounterWithHooks } from './components/01-useState/CounterWithHooks';
-//import {HookApp} from './HookApp'
-//import {SimpleForm} from './components/02-useEffect/SimpleForm'
-//import {FormWithCustomHook} from './components/02-useEffect/FormWithCustomHook'
-//import {MultipleHooks} from './components/03-HookExamples/MultipleHooks'
-//import {FocusScreen} from './components/04-useRef/FocusScreen'
-//import {RealExampleRef} from './components/04-useRef/RealExampleRef'
-//import {Layout} from './components/05-useLayoutEffect/Layout'
-//import {Memorize} from './components/06-useMemory/Memorize'
-//import {MemoHook} from './components/06-useMemory/MemoHook'
-//import {CallBackHook} from './components/06-useMemory/CallBackHook'
-import {Padre} from './components/07-tarea-memo/Padre'
 
-ReactDOM.render(
-  <Padre />,
-  document.getElementById('root')
-);
+const initialState = [{
+    id:1,
+    todo:'Revisar Oilaunch',
+    done: false
+}];
+
+const newTodo = {
+    id:2,
+    todo:'Revisar DMarti',
+    done: false
+}
+
+const addTodoaction = {
+    type:'agregar',
+    paylod: newTodo
+}
+
+const todoReducer = (state = initialState, action) => {
+    if(action?.type === 'agregar'){
+        return [...state, action.paylod]
+    }
+    return state;
+}
+
+let todos = todoReducer();
+
+todos = todoReducer( todos, addTodoaction);
+
+console.log(todos);
