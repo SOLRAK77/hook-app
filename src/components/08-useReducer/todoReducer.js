@@ -3,6 +3,9 @@ export const todoReducer = (state=[], action) => {
         case 'add':
             return [...state,action.payLoad];
 
+        case 'delete':
+            return state.filter(todo => todo.id !== action.payLoad);
+
         default:
             return state;
     }

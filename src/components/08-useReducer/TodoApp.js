@@ -6,11 +6,14 @@ import './style.css'
 //const initialState = 
 
 const init = () => {
-    return [{
+    return JSON.parse(localStorage.getItem('todos')) || [];
+    /*
+    [{
         id: new Date().getTime(),
         desc : 'Apender CSS Avanzado',
         done : false
     }];
+    */
 }
 
 
@@ -28,6 +31,16 @@ export const TodoApp = () => {
     useEffect(() => {
        localStorage.setItem('todos', JSON.stringify(toDos));
     }, [toDos])
+
+    const handleDelete = (todoId) => {
+        console.log('me disparo' + todoId)
+        const actionDelete = {
+            type:'delete',
+            payLoad : todoId
+        }
+
+        dispatch( actionDelete );
+    }
 
     const handleSubmit =  (e) =>{
         e.preventDefault();
@@ -48,7 +61,7 @@ export const TodoApp = () => {
             payLoad : newTodo
         }
 
-        console.log(actionToDo);
+        //console.log(actionToDo);
         dispatch( actionToDo )
         reset();
     }
@@ -75,6 +88,7 @@ export const TodoApp = () => {
                                         
                                         <button 
                                         className="btn btn-danger"
+                                        onClick={() => handleDelete(todo.id)}
                                         >
                                             Borra
                                         </button>                                        
