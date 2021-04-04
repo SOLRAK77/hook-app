@@ -1,3 +1,17 @@
 body{
     padding: 15px 70px;
 }
+
+.todoItem{
+    margin: 0;
+    cursor: pointer;
+}
+
+.list-group-item{
+    align-items: center;
+    display: flex;
+    justify-content: space-between  ;
+}
+.complete{
+    text-decoration: line-through;
+}
