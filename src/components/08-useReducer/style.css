@@ -15,3 +15,8 @@ body{
 .complete{
     text-decoration: line-through;
 }
+
+p{
+    cursor: pointer;
+    margin: 0px;
+}
