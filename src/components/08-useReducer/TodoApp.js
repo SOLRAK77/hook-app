@@ -2,6 +2,7 @@ import React, { useReducer, useEffect } from 'react'
 import { todoReducer } from './todoReducer'
 import { useForm } from '../../Hooks/useForm'
 import './style.css'
+import { TodoList } from './TodoList'
 
 //const initialState = 
 
@@ -82,10 +83,13 @@ export const TodoApp = () => {
             <p></p>
             <div className="row">
                 <div className="col-7">
+                    <TodoList toDos={toDos} handleDelete={handleDelete} handleToggle={handleToggle}/>
+                    {/* TodoList, toDos, handleDelate, handleToggle */}
                     <ul className="list-group list-group-flush">
                     {
                         toDos.map((todo,i) => {
                             return (
+                                    ///* TodoListItem, todo, index, handleDelate, handleToggle  */
                                     <li 
                                         key={todo.id}
                                         className="list-group-item"
