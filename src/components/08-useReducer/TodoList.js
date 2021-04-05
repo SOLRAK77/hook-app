@@ -9,6 +9,7 @@ export const TodoList = ({toDos, handleDelete, handleToggle }) => {
                             return (
                                     ///* TodoListItem, todo, index, handleDelate, handleToggle  */
                                     <TodoListItem 
+                                        key={todo.id}
                                         todo={todo} 
                                         index={i+1} 
                                         handleDelete={handleDelete} 
